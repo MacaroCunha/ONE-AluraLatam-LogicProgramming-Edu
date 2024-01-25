@@ -19,20 +19,18 @@
         <div class="container__conteudo">
             <div class="container__informacoes">
                 <div class="container__texto">
-                    <h1>Adivinhe o <span class="container__texto-azul">numero secreto</span></h1>
-                    <p class="texto__paragrafo">Escolha um número entre 1 a 10</p>
-
+                    <h1>Bem-vindo ao Jogo do <span class="container__texto-azul">numero secreto</span></h1>
+                    <p class="texto__paragrafo" id="mensagemNivel">Selecione um nível de difculdade</p>
                 
-                    <select id="nivelSelecao" class="container__input">
-                        <option value="10">Fácil (1 a 10)</option>
-                        <option value="100">Médio (1 a 100)</option>
-                        <option value="1000">Difícil (1 a 1000)</option>
-                    </select>
+                    <select id="nivelSelecao" class="container__input" onchange="atualizarMensagemNivel()">
+                        <option value="">Selecione</option>
+                        <option value="10">Fácil 1 a 10</option>
+                        <option value="100">Médio 1 a 100</option>
+                        <option value="1000">Difícil 1 a 1000</option>
+                    </select>                                        
                 </div>
 
-                <input type="number" id="numeroEscolhido" min="1" max="10" class="container__input" placeholder="Digite o número">
-
-
+                <input type="number" id="campoChute" min="1" max="10" class="container__input" placeholder="Digite o número">
            
                 <div class="chute container__botoes">
                     <button onclick="verificarChute()" class="container__botao">Chutar</button>
